@@ -1,24 +1,16 @@
-# README
+# Setup a Rails >=3.1 application with a strong and flexible authentication/authorization stack using Devise, CanCanCan and rolify
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# https://github.com/RolifyCommunity/rolify/wiki/Devise---CanCanCan---rolify-Tutorial
+run bundle install to install all required gems
 
-Things you may want to cover:
+Run Devise generator
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# rails generate devise:install
+Create the User model from Devise
+# rails generate devise User
+Create the Ability class from CanCanCan
+# rails generate cancan:ability
+Create the Role class from rolify
+# rails generate rolify Role User
+Run migrations
+# rake db:migrate

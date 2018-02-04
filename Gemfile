@@ -44,10 +44,6 @@ gem 'jquery-rails'
 # Setup a Rails >=3.1 application with a strong and flexible authentication/authorization stack using Devise, CanCanCan and rolify
 # https://github.com/RolifyCommunity/rolify/wiki/Devise---CanCanCan---rolify-Tutorial
 
-gem 'devise'
-gem 'cancancan'
-gem 'rolify'
-
 # Run Devise generator
 # # rails generate devise:install
 # Create the User model from Devise
@@ -58,6 +54,12 @@ gem 'rolify'
 # # rails generate rolify Role User
 # Run migrations
 # # rake db:migrate
+
+gem 'devise'
+gem 'cancancan'
+gem 'rolify'
+
+
 
 
 group :development, :test do
