@@ -1,7 +1,17 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # Added config for mail in production, :host should be set to the actual host of your application.
+  # Added config for mail in production, :host should be set to the actual host of your application
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => ENV['MAILTRAP_USERNAME'],
+    :password => ENV['MAILTRAP_PASSWORD'],
+    :address => 'smtp.mailtrap.io',
+    :domain => 'smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
+  }
+
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # In the development environment your application's code is reloaded on

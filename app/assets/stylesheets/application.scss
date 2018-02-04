@@ -1,3 +1,12 @@
+ body {
+  padding-top: 54px;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
 // example override bootswatch variables
 // $primary:       #FFCF06;
 // $secondary:     #37474f;
@@ -10,6 +19,6 @@
 // end example override
 
 // import scss file
-@import "bootswatch/sketchy/variables";
+@import "bootswatch/flatly/variables";
 @import "bootstrap";
-@import "bootswatch/sketchy/bootswatch";
+@import "bootswatch/flatly/bootswatch";

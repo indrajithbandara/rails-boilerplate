@@ -56,3 +56,59 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+
+<div class="col col-sm-8 align-self-center">
+  <div class="card">
+    <div class="card-header" >
+      <strong>
+          Nous contacter
+      </strong>
+    </div> 
+      <div class="card-body">
+        <form method="POST" action="https://retry24.herokuapp.com/contact/send">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="name">Nom complet</label>
+                 <input type="text" name="name" id="name" placeholder="Nom complet" maxlength="191" required="required" autofocus="autofocus" class="form-control">
+               </div>
+             </div>
+           </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="email">Adresse email</label>
+                   <input type="email" name="email" id="email" value="" placeholder="Adresse email" maxlength="191" required="required" class="form-control">
+                 </div>
+               </div>
+             </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                     <input type="text" name="phone" id="phone" placeholder="Téléphone" maxlength="191" required="required" class="form-control">
+                   </div>
+                 </div>
+               </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                       <textarea name="message" id="message" placeholder="Message" rows="3" class="form-control"></textarea>
+                     </div>
+                   </div>
+                 </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-group mb-0 clearfix">
+                        <button type="submit" class="btn btn-success btn-sm pull-right">
+                        Envoyer le message
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
